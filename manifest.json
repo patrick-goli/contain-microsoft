@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Microsoft Container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This addon is an unofficial fork of Mozilla's Facebook Container designed for Microsoft. \n Microsoft Container isolates your Microsoft activity from the rest of your web activity in order to prevent Microsoft from tracking you outside of the Microsoft website via third party cookies. \n This is not an official Mozilla Product & is in no way related to them.",
   "icons": {
     "48": "icon.png",
