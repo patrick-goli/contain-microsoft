@@ -6,7 +6,7 @@ const MICROSOFT_CONTAINER_ICON = "briefcase";
 let MICROSOFT_DOMAINS = ["microsoft.com", "microsoft.org", "microsoft.net", "microsoft.co", "microsoft.co.uk", "microsoft.nl"];
 const MICROSOFT_SERVICES = ["bing.com", "bing.net", "bingtoolbar.com", "outlook.com", "skype.com", "hotmail.com", "live.com", "sharepoint.com",
  "bingtoolbar.com", "internetexplorer.com",  "onedrive.com", "office.com","office365.com", "xbox.com", "visualstudio.com", "microsoftvisualstudio.com",
-  "microsoftonline.com", "Surface.com", "Zone.com", "rare.com", "Sites.com", "msdn.com"];
+  "microsoftonline.com", "Surface.com", "Zone.com", "rare.com", "Sites.com", "msdn.com", "azure.com"];
 ///
 MICROSOFT_DOMAINS = MICROSOFT_DOMAINS.concat(MICROSOFT_SERVICES);
 
