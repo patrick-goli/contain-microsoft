@@ -1,14 +1,16 @@
 // Param values from https://developer.mozilla.org/Add-ons/WebExtensions/API/contextualIdentities/create
-const MICROSOFT_CONTAINER_NAME = "Microsoft";
-const MICROSOFT_CONTAINER_COLOR = "blue";
-const MICROSOFT_CONTAINER_ICON = "briefcase";
+const MICROSOFT_CONTAINER_DETAILS = {
+  name: "Microsoft",
+  color: "blue",
+  icon: "briefcase"
+};
 
-let MICROSOFT_DOMAINS = ["microsoft.com", "microsoft.org", "microsoft.net", "microsoft.co", "microsoft.co.uk", "microsoft.nl"];
-const MICROSOFT_SERVICES = ["bing.com", "bing.net", "bingtoolbar.com", "outlook.com", "skype.com", "hotmail.com", "live.com", "sharepoint.com",
- "bingtoolbar.com", "internetexplorer.com",  "onedrive.com", "office.com","office365.com", "xbox.com", "visualstudio.com", "microsoftvisualstudio.com",
-  "microsoftonline.com", "Surface.com", "Zone.com", "rare.com", "Sites.com", "msdn.com"];
-///
-MICROSOFT_DOMAINS = MICROSOFT_DOMAINS.concat(MICROSOFT_SERVICES);
+const MICROSOFT_DOMAINS = ["microsoft.com", "microsoft.org", "microsoft.net", "microsoft.co", "microsoft.co.uk", "microsoft.nl", 
+"github.com", "github.io", "githubapp.com", "githubusercontent.com", "azurewebsites.net","azure-mobile.net","cloudapp.net",
+"microsoftproductionstudios.org", "azure.com", "windowsazure.com", "bing.com", "bing.net", "bingtoolbar.com", "outlook.com",
+"skype.com", "hotmail.com", "live.com", "sharepoint.com", "bingtoolbar.com", "internetexplorer.com",  "onedrive.com",
+"office.com","office365.com", "xbox.com", "visualstudio.com","microsoftvisualstudio.com",  "microsoftonline.com", 
+"Surface.com", "Zone.com", "rare.com", "Sites.com", "msdn.com"];
 
 const MAC_ADDON_ID = "@testpilot-containers";
 
@@ -149,15 +151,11 @@ async function clearMicrosoftCookies() {
 
 async function setupContainer() {
   // Use existing Microsoft container, or create one
-  const contexts = await browser.contextualIdentities.query({ name: MICROSOFT_CONTAINER_NAME })
+  const contexts = await browser.contextualIdentities.query({ name: MICROSOFT_CONTAINER_DETAILS.name })
   if (contexts.length > 0) {
     microsoftCookieStoreId = contexts[0].cookieStoreId;
   } else {
-    const context = await browser.contextualIdentities.create({
-      name: MICROSOFT_CONTAINER_NAME,
-      color: MICROSOFT_CONTAINER_COLOR,
-      icon: MICROSOFT_CONTAINER_ICON
-    })
+    const context = await browser.contextualIdentities.create(MICROSOFT_CONTAINER_DETAILS);
     microsoftCookieStoreId = context.cookieStoreId;
   }
 }
