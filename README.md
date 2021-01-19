@@ -1,7 +1,10 @@
+# Project discontinued
+**This addon is no longer maintained.**
+
 # Microsoft Container
 
 **Prevent Microsoft from tracking your visits to other websites**
-Microsoft Container isolates your Microsoft activity from the rest of your web activity and prevent Microsoft from tracking you outside of the its website. 
+Microsoft Container isolates your Microsoft activity from the rest of your web activity and prevent Microsoft from tracking you outside of the its website.
 
 This Project is a fork of [Mozilla's Facebook Container](https://addons.mozilla.org/firefox/addon/facebook-container/) modified to work with Microsoft.
 

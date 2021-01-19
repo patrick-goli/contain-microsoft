@@ -9,14 +9,14 @@ const MICROSOFT_DOMAINS = ["microsoft.com", "microsoft.org", "microsoft.net", "m
 "github.com", "github.io", "githubapp.com", "githubusercontent.com", "azurewebsites.net","azure-mobile.net","cloudapp.net",
 "microsoftproductionstudios.org", "azure.com", "windowsazure.com", "bing.com", "bing.net", "bingtoolbar.com", "outlook.com",
 "skype.com", "hotmail.com", "live.com", "sharepoint.com", "bingtoolbar.com", "internetexplorer.com",  "onedrive.com",
-"office.com","office365.com", "xbox.com", "visualstudio.com","microsoftvisualstudio.com",  "microsoftonline.com", 
+"onenote.com", "office.com","office365.com", "xbox.com", "visualstudio.com","microsoftvisualstudio.com",  "microsoftonline.com",
 "Surface.com", "Zone.com", "rare.com", "Sites.com", "msdn.com"];
 
 const MAC_ADDON_ID = "@testpilot-containers";
 
 let macAddonEnabled = false;
 let microsoftCookieStoreId = null;
-let microsoftCookiesCleared = false;
+//let microsoftCookiesCleared = false;
 
 const canceledRequests = {};
 const microsoftHostREs = [];
